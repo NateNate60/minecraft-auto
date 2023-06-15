@@ -1,0 +1,10 @@
+[Unit]
+Description=Minecraft server
+
+[Service]
+ExecStart=sudo docker run -e EULA=TRUE -d -p 25565:25565 --name mc itzg/minecraft-server --restart unless-stopped
+WorkingDirectory=/home/ubuntu
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
