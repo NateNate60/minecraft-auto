@@ -2,7 +2,7 @@
 Description=Minecraft server
 
 [Service]
-ExecStart=sudo docker run -e EULA=TRUE -d -p 25565:25565 --name mc itzg/minecraft-server --restart unless-stopped
+ExecStart=sudo docker run -e EULA=TRUE --restart unless-stopped -d -p 25565:25565 --name mc itzg/minecraft-server
 WorkingDirectory=/home/ubuntu
 User=ubuntu
 
